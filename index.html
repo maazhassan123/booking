@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a session with Maaz Hassan. Exclusive time for your needs.">
+    <title>Maaz Hassan | Exclusive Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Maaz Hassan</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#booking">Book Session</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Book Your Exclusive <span class="gradient-text">Time</span> with Maaz
+            </h1>
+            <p class="hero-subtitle">
+                Personalized sessions tailored to your schedule. Select your preferred duration and time of day.
+            </p>
+            <a href="#booking" class="cta-button">
+                <span>Book Now</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="hero-image">
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Maaz Hassan" class="profile-img">
+                <div class="floating-badge badge-1">
+                    <span class="badge-icon">✨</span>
+                    <span class="badge-text">Premium Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="section-title">Schedule Your Session</h2>
+            <p class="section-subtitle">Select your preferred duration and time slot</p>
+
+            <div class="booking-container">
+                <!-- Info Side Panel -->
+                <div class="booking-info">
+                    <div class="info-card">
+                        <div class="info-icon">⏱️</div>
+                        <h4>Flexible Durations</h4>
+                        <p>Choose from 10, 15, or 30 minute sessions</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">☀️🌙</div>
+                        <h4>Day & Night</h4>
+                        <p>Morning or evening slots available</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🔒</div>
+                        <h4>Secure Booking</h4>
+                        <p>Your time is reserved exclusively for you</p>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-progress">
+                        <div class="progress-step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Personal Info</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Session Details</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Confirm</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Personal Information (Same as before) -->
+                    <div class="form-step active" id="step1">
+                        <h3 class="step-title">Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Your First Name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Your Last Name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                        <button type="button" class="btn-next" onclick="nextStep(1)">
+                            Continue
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Session Duration & Preference -->
+                    <div class="form-step" id="step2">
+                        <h3 class="step-title">Session Details</h3>
+
+                        <!-- Duration Selection -->
+                        <div class="form-group">
+                            <label>Select Duration</label>
+                            <div class="selection-grid">
+                                <label class="selection-card">
+                                    <input type="radio" name="duration" value="10" required>
+                                    <div class="card-content">
+                                        <span class="card-title">10 Minutes</span>
+                                        <span class="card-price">$20</span>
+                                    </div>
+                                </label>
+                                <label class="selection-card">
+                                    <input type="radio" name="duration" value="15">
+                                    <div class="card-content">
+                                        <span class="card-title">15 Minutes</span>
+                                        <span class="card-price">$30</span>
+                                    </div>
+                                </label>
+                                <label class="selection-card">
+                                    <input type="radio" name="duration" value="30">
+                                    <div class="card-content">
+                                        <span class="card-title">30 Minutes</span>
+                                        <span class="card-price">$50</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Time Preference -->
+                        <div class="form-group">
+                            <label>Time Preference</label>
+                            <div class="selection-grid two-col">
+                                <label class="selection-card">
+                                    <input type="radio" name="timePreference" value="day" required>
+                                    <div class="card-content">
+                                        <span class="card-icon">☀️</span>
+                                        <span class="card-title">Day</span>
+                                        <span class="card-subtitle">9:00 AM - 5:00 PM</span>
+                                    </div>
+                                </label>
+                                <label class="selection-card">
+                                    <input type="radio" name="timePreference" value="night">
+                                    <div class="card-content">
+                                        <span class="card-icon">🌙</span>
+                                        <span class="card-title">Night</span>
+                                        <span class="card-subtitle">6:00 PM - 10:00 PM</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn-prev" onclick="prevStep(2)">Back</button>
+                            <button type="button" class="btn-next" onclick="nextStep(2)">Continue</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Date & Specific Time -->
+                    <div class="form-step" id="step3">
+                        <h3 class="step-title">Finalize Schedule</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Select Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Select Time Slot</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select preferences first</option>
+                                    <!-- Options will be populated by JS -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Rate Display -->
+                        <div class="rate-summary">
+                            <div class="rate-row">
+                                <span>Session Rate:</span>
+                                <span id="finalRate" class="price-tag">$0.00</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Message for Maaz (Optional)</label>
+                            <textarea id="notes" name="notes" placeholder="Any specific topics you'd like to discuss..."
+                                rows="3"></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn-prev" onclick="prevStep(3)">Back</button>
+                            <button type="submit" class="btn-submit">Confirm Booking</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success-animation">
+                <div class="checkmark-circle">
+                    <div class="checkmark"></div>
+                </div>
+            </div>
+            <h3>Booking Confirmed!</h3>
+            <p>Your session with Maaz has been scheduled.</p>
+            <div class="booking-summary" id="bookingSummary"></div>
+            <button class="btn-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h4>Email</h4>
+                    <p>contact@maazhassan.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Location</h4>
+                    <p>Online / Virtual Meeting</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Maaz Hassan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
